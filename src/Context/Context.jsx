@@ -61,7 +61,7 @@ const Context = ({ children }) => {
                     );
                 }
             } catch (err) {
-                
+                console.error("Error fetching JWT token:", err);
             } finally {
                 setLoading(false); // Always stop loading regardless of the outcome
             }
