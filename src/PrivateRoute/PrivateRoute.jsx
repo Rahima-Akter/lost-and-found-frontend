@@ -10,7 +10,7 @@ const PrivateRoute = ({ children }) => {
 
     if (loading) {
         return <div className="w-full py-10 flex justify-center items-center">
-            <Spinner/>
+            
             </div>
     }
 
