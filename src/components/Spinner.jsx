@@ -22,7 +22,7 @@ const Spinner = () => {
                         strokeWidth='24'
                     ></line>
                     <line
-                        x1='195.9'
+                        
                         y1='60.1'
                         x2='173.3'
                         y2='82.7'
