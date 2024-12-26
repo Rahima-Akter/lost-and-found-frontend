@@ -13,7 +13,7 @@ const Toggle = () => {
                 <div className='space-x-3 flex'>
                     <Link to="/recovered">
                         <div className="bg-gray-800 rounded-md text-white p-2 cursor-pointer">
-                            <LuTableOfContents />
+                            
                         </div>
                     </Link>
                     <Link to="/recovered/card">

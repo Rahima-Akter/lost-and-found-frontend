@@ -24,7 +24,7 @@ const AddLostFoundItem = () => {
         const formData = {
             postType,
             title,
-            
+            description,
             category,
             location,
             date: date.toISOString(),
