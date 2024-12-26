@@ -20,7 +20,7 @@ const AllRecoveredCard = () => {
                         items.map(item => <div key={item._id}>
                             <div className='shadow-xl rounded p-4'>
                                 <div className='flex justify-between items-center font-semibold text-lg'>
-                                    <p>{item.title}</p>
+                                    
                                     <p>{format(new Date(item.date), 'P')}</p>
                                 </div>
                                 <p><span className='font-semibold text-lg'>Location:</span> {item.location}</p>
