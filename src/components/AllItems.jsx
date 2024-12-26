@@ -15,7 +15,7 @@ const AllItems = () => {
                 const {data} = await axios.get(`http://localhost:5000/query?search=${search}`);
                 setItem(data);
             } catch (error) {
-                
+                Swal.error("Error fetching data:", error);
             }
         };
         fetchData();
