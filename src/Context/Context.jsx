@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config"
+import axios from "axios";
 
 
 export const authContext = createContext()
@@ -24,7 +25,7 @@ const Context = ({ children }) => {
         signOut(auth)
     }
 
-    const manageProfile = (name, image) => {
+    const updateUserProfile = (name, image) => {
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: image
         }).then(() => {
@@ -35,35 +36,50 @@ const Context = ({ children }) => {
 
     // google Login
     const googleProvider = new GoogleAuthProvider();
-    const handleGoogleLogin = () => {
+    const signInWithGoogle = () => {
         return signInWithPopup(auth, googleProvider)
     };
 
     // observer
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            if (currentUser) {
-                setUser(currentUser)
-                setLoading(false)
-            } else {
-                setUser(null)
+        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+            try {
+                if (currentUser?.email) {
+                    setUser(currentUser);
+                    // Fetch the JWT token
+                    const { data } = await axios.post(
+                        `http://localhost:5000/jwt`,
+                        { email: currentUser.email },
+                        { withCredentials: true }
+                    );
+                    // console.log(data, "This is the token");
+                } else {
+                    setUser(null);
+                    const { data } = await axios.get(
+                        `http://localhost:5000/logout`,
+                        { withCredentials: true }
+                    );
+                }
+            } catch (err) {
+                console.error("Error fetching JWT token:", err);
+            } finally {
+                setLoading(false); // Always stop loading regardless of the outcome
             }
-            setLoading(false)
         });
 
         return () => {
-            unsubscribe()
+            unsubscribe(); // Clean up the listener on unmount
         };
+    }, []);
 
-    }, [])
 
 
     const authInfo = {
         handleRegister,
-        handleGoogleLogin,
+        signInWithGoogle,
         logIn,
         logOut,
-        manageProfile,
+        updateUserProfile,
         loading,
         user,
         setUser

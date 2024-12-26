@@ -1,0 +1,212 @@
+[
+    {
+      "postType": "Lost",
+      "thumbnail": "https://5.imimg.com/data5/SELLER/Default/2022/11/VP/CM/OO/162836935/danjue-genuine-cow-leather-men-wallet-fashion-coin-pocket-brand-trifold-design-men-purse-high-quality-1--500x500.jpg",
+      "title": "Lost Black Wallet",
+      "description": "I lost my black leather wallet near the downtown bus stop on a busy weekday evening. It contains my driver’s license, some cash, and a few credit cards. The wallet is a gift and holds sentimental value for me. Please contact me if found. A small reward will be offered for its safe return.",
+      "category": "Accessories",
+      "location": "Downtown Bus Stop",
+      "date": "2024-11-10T00:00:00.000Z",
+      "status": "lost",
+      "contact": {
+        "name": "Rahima Akter",
+        "email": "rahimaakter1527@gmail.com"
+      }
+    },
+    {
+      "postType": "Found",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqYss0QHa0iCuBRtouwR-6tCe5APJ8t1vM2Q&s",
+      "title": "Found Golden Retriever",
+      "description": "I found a golden retriever wandering near Central Park this afternoon. The dog appears well-groomed and is wearing a red collar without any tags. It seems friendly and trained. If you believe this is your dog, please provide a detailed description or a photo for identification.",
+      "category": "Pets",
+      "location": "Central Park",
+      "date": "2024-12-11T00:00:00.000Z",
+      "status": "found",
+      "contact": {
+        "name": "Jane Smith",
+        "email": "janesmith@example.com"
+      }
+    },
+    {
+      "postType": "Lost",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREM3vcIobwN87GrC6WS8n_pfafE46ynVYXdg&s",
+      "title": "Lost Passport",
+      "description": "I lost my passport with the name 'Alice Johnson' at the airport, possibly in Terminal 3. It’s a United States passport and is crucial for my upcoming travels. If anyone has found it, please let me know as soon as possible. I’m offering a reward for its safe return.",
+      "category": "Documents",
+      "location": "Airport Terminal 3",
+      "date": "2024-12-12T00:00:00.000Z",
+      "status": "lost",
+      "contact": {
+        "name": "Alice Johnson",
+        "email": "alicejohnson@example.com"
+      }
+    },
+    {
+      "postType": "Found",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxRQ8uxxGm-4OiieEi8e36IWwjH1Svul-7xw&s",
+      "title": "Found iPhone 14",
+      "description": "I found a black iPhone 14 with a cracked screen on a table at Starbucks Cafe on Elm Street. The phone was unlocked, but I didn’t access any personal information. If this is yours, please describe the lock screen wallpaper or any distinguishing features.",
+      "category": "Gadgets",
+      "location": "Starbucks Cafe, Elm Street",
+      "date": "2025-01-03T00:00:00.000Z",
+      "status": "found",
+      "contact": {
+        "name": "Rahima Akter",
+        "email": "rahimaakter1527@gmail.com"
+      }
+    },
+    {
+      "postType": "Lost",
+      "thumbnail": "https://media.istockphoto.com/id/1170148975/photo/set-of-three-house-keys-on-the-ring-on-table-in-a-room-bunch-of-apartment-keys-close-up-to.jpg?s=612x612&w=0&k=20&c=O6aMi5XRalJbAb9v3hCBX7K1gLk87RQSMJmscEVmRag=",
+      "title": "Lost Keys",
+      "description": "I misplaced a set of house keys with a small red keychain near the entrance of City Park. The keys include a car key and two house keys. If you found them, please contact me as soon as possible. These keys are vital for my daily routine.",
+      "category": "Accessories",
+      "location": "City Park Entrance",
+      "date": "2024-12-15T00:00:00.000Z",
+      "status": "lost",
+      "contact": {
+        "name": "Rahima Akter",
+        "email": "rahimaakter1527@gmail.com"
+      }
+    },
+    {
+      "postType": "Found",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-RqLRKzR1LbjG6eE_z7TzUEFmEIRL-ADHyQ&s",
+      "title": "Found Wallet",
+      "description": "I found a brown leather wallet in the Main Library near the reading area. The wallet contains some cash and identification cards. If you can describe the wallet’s contents or provide identification matching the cards, please reach out to claim it.",
+      "category": "Accessories",
+      "location": "Main Library",
+      "date": "2024-12-20T00:00:00.000Z",
+      "status": "found",
+      "contact": {
+        "name": "John Doe",
+        "email": "johndoe@example.com"
+      }
+    },
+    {
+      "postType": "Lost",
+      "thumbnail": "https://cdn.pixabay.com/photo/2022/02/15/15/57/ring-7015206_640.jpg",
+      "title": "Lost Silver Ring",
+      "description": "I lost a silver ring with an engraved 'R' near the community swimming pool. The ring holds great sentimental value for me as it was a gift from my grandmother. If anyone finds it, please contact me immediately.",
+      "category": "Jewelry",
+      "location": "Community Swimming Pool",
+      "date": "2024-12-15T00:00:00.000Z",
+      "status": "lost",
+      "contact": {
+        "name": "Ravi Gupta",
+        "email": "ravi.gupta@example.com"
+      }
+    },
+    {
+      "postType": "Found",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLTaR22e8jRP7Dr0imrEpLplaMDVx9LFGsaQ&s",
+      "title": "Found Dell Laptop",
+      "description": "I found a Dell Inspiron laptop left behind in a conference room. The laptop has a company sticker on the back. If this belongs to you, please contact me with proof of ownership.",
+      "category": "Electronics",
+      "location": "Downtown Office Building",
+      "date": "2024-12-17T00:00:00.000Z",
+      "status": "found",
+      "contact": {
+        "name": "Samantha Lee",
+        "email": "samantha.lee@example.com"
+      }
+    },
+    {
+      "postType": "Lost",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQijshM-ccELX9hTjUABqvXN1rZQ-XroIjQw&s",
+      "title": "Lost Canon DSLR",
+      "description": "I left my Canon DSLR camera at a local park. It has a black strap with 'Canon' printed on it. The camera contains photos from my recent trip that are very important to me. Please let me know if you found it.",
+      "category": "Gadgets",
+      "location": "Westside Park",
+      "date": "2024-12-18T00:00:00.000Z",
+      "status": "lost",
+      "contact": {
+        "name": "Tom Martin",
+        "email": "tom.martin@example.com"
+      }
+    },
+    {
+      "postType": "Found",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPCUXQ7I8b_Dg5gdbpinU34nyD8Oazk0JQGqO60R-Mx5in8NwbOZCgEA2axVg52XlyaZg&usqp=CAU",
+      "title": "Found Phone",
+      "description": "A phone was found near the subway station entrance. It's a newer model, with a blue case. If you are missing this phone, please describe the lock screen or provide other identifying features.",
+      "category": "Gadgets",
+      "location": "Subway Station Entrance",
+      "date": "2024-12-22T00:00:00.000Z",
+      "status": "found",
+      "contact": {
+        "name": "Maya Park",
+        "email": "maya.park@example.com"
+      }
+    },
+    {
+      "postType": "Lost",
+      "thumbnail": "https://www.digitaltrends.com/wp-content/uploads/2022/05/sony-wh-1000xm5-launch-3.jpeg?p=1",
+      "description": "I lost a pair of wireless Bluetooth headphones while jogging at Green Park. The headphones are black with a gold trim. I’d really appreciate it if someone could return them. They are quite expensive.",
+      "category": "Electronics",
+      "location": "Green Park",
+      "date": "2025-1-1T00:00:00.000Z",
+      "status": "lost",
+      "contact": {
+        "name": "David Lee",
+        "email": "david.lee@example.com"
+      }
+    },
+    {
+      "postType": "Found",
+      "thumbnail": "https://media.istockphoto.com/id/543815624/photo/wool-red-scarf.jpg?s=612x612&w=0&k=20&c=IKfGiXh2KyTxBWLF_eMvpH-e5pAtDG6hvEgRdTblEww=",
+      "title": "Found Red Scarf",
+      "description": "I found a red scarf on the bench at the city library. It's made of soft wool and appears new. If you lost a scarf, please contact me with a description.",
+      "category": "Clothing",
+      "location": "City Library",
+      "date": "2025-5-13T00:00:00.000Z",
+      "status": "found",
+      "contact": {
+        "name": "Lena Morgan",
+        "email": "lena.morgan@example.com"
+      }
+    },
+    {
+      "postType": "Lost",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4zEvUL00KNDL0g4hqUpBWm1kpVTugVpzGng&s",
+      "title": "Lost Black Backpack",
+      "description": "I lost my black backpack on the train from Central Station. It contains important work documents and my laptop. Please let me know if you've found it.",
+      "category": "Bags",
+      "location": "Central Station",
+      "date": "2025-3-21T00:00:00.000Z",
+      "status": "lost",
+      "contact": {
+        "name": "Tom Smith",
+        "email": "tom.smith@example.com"
+      }
+    },
+    {
+      "postType": "Found",
+      "thumbnail": "https://c0.wallpaperflare.com/preview/714/751/605/toy-car-red-vintage.jpg",
+      "title": "Found Red Toy Car",
+      "description": "I found a small red toy car at the playground. It's in perfect condition. If you think it belongs to your child, feel free to contact me.",
+      "category": "Toys",
+      "location": "Westside Playground",
+      "date": "2025-2-14T00:00:00.000Z",
+      "status": "found",
+      "contact": {
+        "name": "Laura Green",
+        "email": "laura.green@example.com"
+      }
+    },
+    {
+      "postType": "Lost",
+      "thumbnail": "https://media.istockphoto.com/id/926602750/photo/tennis-player-with-racket.jpg?s=612x612&w=0&k=20&c=V9AssLFbuITQPxbageZCY0u1cy465bx9nwA57-yJPXw=",
+      "title": "Lost Tennis Racket",
+      "description": "I lost my tennis racket at the sports club. It's a Wilson ProStaff with a black and white grip. If you find it, please contact me.",
+      "category": "Sports Equipment",
+      "location": "City Sports Club",
+      "date": "2025-1-19T00:00:00.000Z",
+      "status": "lost",
+      "contact": {
+        "name": "Nina Patel",
+        "email": "nina.patel@example.com"
+      }
+    }
+  ]
+  

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { authContext } from "../Context/Context";
 import { Navigate, useLocation } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 
 const PrivateRoute = ({ children }) => {
@@ -8,11 +9,13 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation()
 
     if (loading) {
-        return <div className="w-full py-52 flex justify-center items-center"><span className="loading loading-bars loading-lg bg-[#15C8A0]"></span></div>
+        return <div className="w-full py-10 flex justify-center items-center">
+            <Spinner/>
+            </div>
     }
 
     if (!user) {
-        return <Navigate state={{ from: location.pathname }} to="/login"></Navigate>
+        return <Navigate state={{ from: location }} to="/login"></Navigate>
     }
 
     return children;
