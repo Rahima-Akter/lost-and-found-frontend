@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         element: <MainLayout></MainLayout>,
         children: [
             {
-                
+                path: '/',
             },
             {
                 path: '/allItem',
