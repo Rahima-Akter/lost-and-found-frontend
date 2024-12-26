@@ -13,7 +13,7 @@ const LostAndFoundStats = () => {
                 successStories: 567,
                 itemsListed: 342,
             };
-            
+            setStats(mockStats);
         };
 
         fetchStats();
