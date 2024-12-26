@@ -12,12 +12,13 @@ import AllRecovered from "../pages/AllRecovered/AllRecovered";
 import Toggle from "../pages/AllRecovered/Toggle";
 import AllRecoveredCard from "../pages/AllRecovered/AllRecoveredCard";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import NotFound from "../components/NotFound";
 
 const router = createBrowserRouter([
-    // {
-    //     path: '*',
-    //     element: <ErrorPage></ErrorPage>
-    // },
+    {
+        path: '*',
+        element: <NotFound/>
+    },
     {
         path: '/',
         element: <MainLayout></MainLayout>,
