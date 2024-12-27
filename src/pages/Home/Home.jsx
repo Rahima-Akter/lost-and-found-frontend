@@ -1,8 +1,8 @@
 import React from 'react';
 import Banner from './Banner';
-import ItemsCards from '../../components/ItemsCards';
-import ReunitedStories from '../../components/ReunitedStories';
-import LostAndFoundStats from '../../components/LostAndFoundStats';
+import ItemsCards from './ItemsCards';
+import ReunitedStories from './ReunitedStories';
+import LostAndFoundStats from './LostAndFoundStats';
 
 const Home = () => {
     return (

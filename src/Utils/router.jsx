@@ -26,12 +26,12 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />,
-                loader: () => fetch('http://localhost:5000/item')
+                loader: () => fetch('https://lost-and-found-server-two.vercel.app/item')
             },
             {
                 path: '/allItem',
                 element: <AllItems />,
-                loader: () => fetch('http://localhost:5000/item')
+                loader: () => fetch('https://lost-and-found-server-two.vercel.app/item')
             },
             {
                 path: '/myItems',
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <Details />
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/singleItem/${params.id}`)
+                loader: ({ params }) => fetch(`https://lost-and-found-server-two.vercel.app/singleItem/${params.id}`)
             },
             {
                 path: '/login',

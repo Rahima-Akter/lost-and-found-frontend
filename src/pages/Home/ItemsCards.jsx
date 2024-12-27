@@ -14,20 +14,20 @@ const ItemsCards = () => {
     const slicedItems = filterDate.slice(0, 6);
 
     return (
-        <div className="my-12">
-            <p className="text-center font-bold text-3xl drop-shadow-xl mt-16">
+        <div className="my-12 dark:bg-black">
+            <p className="text-center font-bold text-2xl md:text-3xl drop-shadow-xl mt-16">
                 Latest Find & Lost Items
             </p>
-            <Link to="/allItem" className="btn my-5 bg-gray-800 hover:bg-gray-700 text-white">
+            <Link to="/allItem" className="btn btn-sm md:btn-md my-5 bg-gray-800 hover:bg-gray-700 text-white">
                 View All...
             </Link>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {slicedItems.map(item => (
                     <div
                         key={item._id}
-                        className="flex flex-col max-w-md p-6 space-y-6 overflow-hidden rounded-lg shadow-lg dark:bg-gray-50 dark:text-gray-800 hover:scale-95 duration-700"
+                        className="flex flex-col max-w-sm px-6 py-3 overflow-hidden rounded-lg shadow-lg dark:bg-gray-50 dark:text-gray-800 hover:scale-95 duration-700"
                     >
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-4 mb-4">
                             <img
                                 alt=""
                                 src={item.contact.photo || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMELiYWrb60oG6HxN_tdDOjqoEwhATOtC3uQ&s"}

@@ -30,7 +30,7 @@ const ReunitedStories = () => {
     return (
         <div className="bg-gray-100 py-10 px-6 my-10">
             <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl font-bold text-gray-700 mb-4">Reunited and It Feels So Good!</h2>
+                <h2 className="md:text-3xl text-2xl font-bold text-gray-700 mb-4">Reunited and It Feels So Good!</h2>
                 <p className="text-gray-600 mb-8">
                     Heartwarming stories of people who found their lost belongings, thanks to our platform.
                 </p>

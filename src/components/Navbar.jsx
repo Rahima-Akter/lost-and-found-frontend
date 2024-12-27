@@ -1,13 +1,14 @@
-import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { authContext } from '../Context/Context';
+import logo from '../assets/logo.png';
+import useAuth from '../hooks/useAuth';
+import ThemeSwitcher from '../components/ThemeSwitcher';
 
 const Navbar = () => {
-    const { user, logOut } = useContext(authContext)
+    const { user, logOut } = useAuth()
     return (
-        <div className="navbar bg-gray-800 text-white fixed top-0 left-0 right-0 px-10 z-10">
+        <div className="navbar bg-gray-800 text-white fixed top-0 left-0 right-0 md:px-10 px-4 z-10">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">Reunify</a>
+                <Link to="/" className='flex items-center justify-center md:gap-2 text-white font-bold lg:text-2xl text-xl'><img src={logo} alt="" className='w-14 rounded' /><span>Reunify</span></Link>
             </div>
             <div className="flex-none gap-6">
                 <div className="space-x-4 hidden lg:flex">
@@ -23,6 +24,9 @@ const Navbar = () => {
                     >
                         Lost&Found Items
                     </NavLink>
+                </div>
+                <div className="w-10 rounded-full">
+                    <ThemeSwitcher />
                 </div>
                 {/* profile dropdown */}
                 {

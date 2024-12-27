@@ -48,7 +48,7 @@ const Context = ({ children }) => {
                     setUser(currentUser);
                     // Fetch the JWT token
                     const { data } = await axios.post(
-                        `http://localhost:5000/jwt`,
+                        `https://lost-and-found-server-two.vercel.app/jwt`,
                         { email: currentUser.email },
                         { withCredentials: true }
                     );
@@ -56,7 +56,7 @@ const Context = ({ children }) => {
                 } else {
                     setUser(null);
                     const { data } = await axios.get(
-                        `http://localhost:5000/logout`,
+                        `https://lost-and-found-server-two.vercel.app/logout`,
                         { withCredentials: true }
                     );
                 }

@@ -5,7 +5,7 @@ Reunify
 The purpose of this project is to build a dynamic web application using modern technologies to provide features such as user authentication, item management, and a smooth user experience with advanced UI elements.
 
 ## Live URL
-[Insert live URL here] - *This will be the deployed version of your project.*
+[https://sritys-reunify.netlify.app/]
 
 ## Key Features
 - **React**: Used for building the user interface, allowing for fast rendering and a dynamic, interactive experience.

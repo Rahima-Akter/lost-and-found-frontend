@@ -4,9 +4,10 @@ import { authContext } from '../../Context/Context';
 import { format } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import axios from 'axios';
+import useAxiosSecure from '../../hooks/axiosSecure';
 
 const ManageMyItems = () => {
+    const axiosSecure = useAxiosSecure()
     const { user } = useContext(authContext)
     const [itemData, setItemData] = useState([])
     const navigate = useNavigate()
@@ -15,15 +16,12 @@ const ManageMyItems = () => {
         if (user?.email) {
             const fetchData = async () => {
                 try {
-                    const { data } = await axios.get(`http://localhost:5000/itemsByEmail/${user.email}`, {
-                        withCredentials: true,
-                    });
+                    const { data } = await axiosSecure.get(`/itemsByEmail/${user.email}`);
                     setItemData(data);
                 } catch (error) {
                     console.error('Error fetching items by email:', error);
                 }
             };
-    
             fetchData();
         }
     }, [user, setItemData]);
@@ -42,7 +40,7 @@ const ManageMyItems = () => {
         }).then(async (result) => { // Use async inside .then
             if (result.isConfirmed) {
                 try {
-                    const { data } = await axios.delete(`http://localhost:5000/singleItem/${id}`);
+                    const { data } = await axiosSecure.delete(`/singleItem/${id}`);
                     if (data.deletedCount) {
                         Swal.fire({
                             title: "Deleted!",
@@ -64,9 +62,6 @@ const ManageMyItems = () => {
             }
         });
     };
-    
-
-
     return (
         <>
             {
@@ -77,8 +72,8 @@ const ManageMyItems = () => {
                     <div className='flex flex-col mt-6'>
                         <div className='-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
                             <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
-                                <div className='overflow-hidden border border-gray-200  md:rounded-lg'>
-                                    <table className='min-w-full divide-y divide-gray-200'>
+                                <div className='overflow-auto border border-gray-200 md:rounded-lg'>
+                                    <table className='lg:w-full w-[110%] divide-y divide-gray-200'>
                                         <thead className='bg-gray-50'>
                                             <tr>
                                                 <th
@@ -115,12 +110,12 @@ const ManageMyItems = () => {
 
                                                 <th
                                                     scope='col'
-                                                    className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
+                                                    className='px-6 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
                                                 >
                                                     Post Type
                                                 </th>
 
-                                                <th></th>
+                                                <th className=''></th>
                                             </tr>
                                         </thead>
                                         {

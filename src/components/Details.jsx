@@ -1,15 +1,16 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { format } from 'date-fns';
-import { authContext } from '../Context/Context';
 import Swal from 'sweetalert2';
-import axios from 'axios';
+import useAuth from '../hooks/useAuth';
+import useAxiosSecure from '../hooks/axiosSecure';
+import { format } from 'date-fns';
 
 const Details = () => {
+    const axiosSecure = useAxiosSecure()
     const navigate = useNavigate();
-    const { user } = useContext(authContext);
+    const { user } = useAuth();
     const [startDate, setStartDate] = useState(new Date());
     const data = useLoaderData();
     const { postType, title, description, category, location, date, thumbnail, contact, status, _id } = data || {};
@@ -29,7 +30,7 @@ const Details = () => {
 
         // send data to the database
         try {
-            const { data } = await axios.post('http://localhost:5000/recoveredItem', formData);
+            const { data } = await axiosSecure.post('/recoveredItem', formData);
             if (data.insertedId) {
                 document.getElementById('detailsModal')?.close();
                 Swal.fire({
@@ -49,12 +50,11 @@ const Details = () => {
     };
 
     return (
-        <div className='flex lg:flex-row flex-col gap-6 max-w-screen-lg mx-auto my-12'>
-
-            <div className='flex-1 px-4 py-7 bg-white rounded-md shadow-md md:min-h-[350px] flex flex-col'>
+        <div className='flex lg:flex-row flex-col gap-6 lg:max-w-screen-lg w-10/12 mx-auto my-12'>
+            <div className='flex-1 px-4 py-7 bg-white rounded-md shadow-md lg:min-h-[350px] flex flex-col'>
                 <div className='flex items-center justify-between'>
                     <span className='text-sm font-light text-gray-800 '>
-                        <span className='font-bold'>Posted At:</span> {format(new Date(date), 'P')}
+                        <span className='font-bold'>Posted At:</span> {format(date, 'P')}
                     </span>
                     <span
                         className={`rounded-full px-4 py-1 text-xs uppercase text-black ${postType === "Lost"
@@ -92,7 +92,7 @@ const Details = () => {
                             />
                         </div>
                     </div>
-                    <div className='flex gap-5 mt-2 mb-5'>
+                    <div className='flex md:flex-row flex-col md:gap-5 mt-2 mb-5'>
                         <p className='text-[15px] font-bold text-gray-600 '>
                             Location: <span className='text-sm text-gray-600 font-normal'>{location}</span>
                         </p>
@@ -179,7 +179,7 @@ const Details = () => {
 
             </div>
             {/* image div */}
-            <div className='w-[45%] overflow-hidden'>
+            <div className='lg:w-[45%] w-full overflow-hidden'>
                 <img src={thumbnail} alt="" className='object-cover w-full h-full' />
             </div>
         </div>

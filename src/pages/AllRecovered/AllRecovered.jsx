@@ -1,16 +1,24 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { authContext } from '../../Context/Context';
+import React, { useEffect, useState } from 'react';
 import { format } from 'date-fns';
+import useAuth from '../../hooks/useAuth';
+import useAxiosSecure from '../../hooks/axiosSecure';
 
 const AllRecovered = () => {
-    const { user } = useContext(authContext)
+    const axiosSecure = useAxiosSecure()
+    const { user } = useAuth()
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/recoveredItem/${user?.email}`)
-            .then(res => res.json())
-            .then(result => setItems(result))
-    }, [user, setItems])
+        const fetchRecoveredItems = async () => {
+            try {
+                const { data } = await axiosSecure.get(`/recoveredItem/${user?.email}`);
+                setItems(data);
+            } catch (err) {
+                console.error("Error fetching recovered items:", err);
+            }
+        };
+        fetchRecoveredItems();
+    }, [user, setItems]);
 
     return (
         <>
@@ -90,7 +98,7 @@ const AllRecovered = () => {
                                                         {item.email}
                                                     </td>
                                                     <td className='px-4 py-4 text-sm text-gray-600  whitespace-nowrap'>
-                                                        <span className={`px-2 rounded-full ${item.status === "recovered"? "bg-green-600/30" : "bg-red-600/30"}`}>{item.status || "N/A"}</span>
+                                                        <span className={`px-2 rounded-full ${item.status === "recovered" ? "bg-green-600/30" : "bg-red-600/30"}`}>{item.status || "N/A"}</span>
                                                     </td>
                                                 </tr>
                                             </tbody>)

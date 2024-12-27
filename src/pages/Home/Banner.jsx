@@ -37,7 +37,7 @@ const Banner = () => {
     return (
         <div className="relative">
             <Swiper
-                modules={[ Pagination, Autoplay]}
+                modules={[Pagination, Autoplay]}
                 autoplay={{ delay: 5000 }}
                 spaceBetween={0}
                 slidesPerView={1}
@@ -60,9 +60,16 @@ const Banner = () => {
                             <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
                                 <motion.h2
                                     className="text-4xl md:text-6xl font-bold"
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8 }}
+                                    initial={{ opacity: 1, color: 'yellow' }}
+                                    animate={{
+                                        color: ['#FF6347', '#FFD700', '#32CD32', '#8A2BE2'], 
+                                    }}
+                                    transition={{
+                                        duration: 2,
+                                        repeat: Infinity,
+                                        repeatType: 'loop', 
+                                        ease: 'linear',
+                                    }}
                                 >
                                     {slide.title}
                                 </motion.h2>
