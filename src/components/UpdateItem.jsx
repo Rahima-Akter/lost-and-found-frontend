@@ -81,13 +81,13 @@ const UpdateItem = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg mt-8">
-            <h1 className="text-2xl font-bold mb-6 text-gray-700">Update {item.title}</h1>
+        <div className="max-w-4xl mx-auto p-8 bg-white dark:bg-gray-800 shadow-lg rounded-lg my-8">
+            <h1 className="text-2xl font-bold mb-6 text-gray-700 dark:text-white">Update {item.title}</h1>
             <form onSubmit={handleSubmit} className="max-w-full w-full flex flex-col gap-5 p-4">
                 <div className="flex md:flex-row flex-col gap-7 justify-between items-center">
                     {/* Post Type */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Post Type</label>
+                        <label className="block text-gray-600 dark:text-gray-200 font-medium mb-2">Post Type</label>
                         <select
                             value={postType}
                             onChange={(e) => setPostType(e.target.value)}
@@ -100,7 +100,7 @@ const UpdateItem = () => {
 
                     {/* Thumbnail */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Thumbnail (Image)</label>
+                        <label className="block text-gray-600 dark:text-gray-200 font-medium mb-2">Thumbnail (Image)</label>
                         <input
                             type="text"
                             value={thumbnail}
@@ -114,7 +114,7 @@ const UpdateItem = () => {
                 <div className="flex md:flex-row flex-col gap-7 justify-between items-center">
                     {/* Title */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Title</label>
+                        <label className="block text-gray-600 dark:text-gray-200 font-medium mb-2">Title</label>
                         <input
                             type="text"
                             value={title}
@@ -127,7 +127,7 @@ const UpdateItem = () => {
 
                     {/* Category */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Category</label>
+                        <label className="block text-gray-600 dark:text-gray-200 font-medium mb-2">Category</label>
                         <input
                             type="text"
                             value={category}
@@ -141,7 +141,7 @@ const UpdateItem = () => {
                 <div className="flex md:flex-row flex-col gap-7 justify-between items-center">
                     {/* Location */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Location</label>
+                        <label className="block text-gray-600 dark:text-gray-200 font-medium mb-2">Location</label>
                         <input
                             type="text"
                             value={location}
@@ -154,7 +154,7 @@ const UpdateItem = () => {
 
                     {/* Date */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Date Lost or Found</label>
+                        <label className="block text-gray-600 dark:text-gray-200 font-medium mb-2">Date Lost or Found</label>
                         <DatePicker
                             selected={date}
                             onChange={(date) => setDate(date)}
@@ -166,7 +166,7 @@ const UpdateItem = () => {
                 <div className="flex md:flex-row flex-col gap-7 justify-between items-center">
                     {/* Description */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Description</label>
+                        <label className="block text-gray-600 dark:text-gray-200 font-medium mb-2">Description</label>
                         <textarea
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
@@ -179,7 +179,7 @@ const UpdateItem = () => {
 
                     {/* Contact Information */}
                     <div className="space-y-3 w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Contact Information</label>
+                        <label className="block text-gray-600 dark:text-gray-200 font-medium">Contact Information</label>
                         <input
                             type="text"
                             value={user?.displayName}
@@ -197,7 +197,7 @@ const UpdateItem = () => {
                 {/* Submit Button */}
                 <button
                     type="submit"
-                    className="w-full mt-3 px-4 py-2 text-white font-bold rounded-lg bg-gray-800 hover:bg-gray-700"
+                    className="w-full mt-3 px-4 py-2 text-white font-bold rounded-lg bg-gray-900 hover:bg-gray-950"
                 >
                     Update Post
                 </button>

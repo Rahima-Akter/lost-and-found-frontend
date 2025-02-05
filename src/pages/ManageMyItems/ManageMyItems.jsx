@@ -67,18 +67,18 @@ const ManageMyItems = () => {
             {
                 itemData.length === 0 ? <p className='text-center text-3xl drop-shadow-xl text-gray-900 font-bold mt-12'>No Data Available</p> : (<section className='container px-4 mx-auto my-12'>
                     <div className='flex items-center gap-x-3'>
-                        <h2 className='text-lg font-medium text-gray-800 '>My Posted Items</h2>
+                        <h2 className='text-lg font-medium text-gray-800 dark:text-white'>My Posted Items</h2>
                     </div>
                     <div className='flex flex-col mt-6'>
                         <div className='-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
                             <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
                                 <div className='overflow-auto border border-gray-200 md:rounded-lg'>
                                     <table className='lg:w-full w-[110%] divide-y divide-gray-200'>
-                                        <thead className='bg-gray-50'>
+                                        <thead className='bg-gray-50 dark:bg-gray-900 dark:text-white'>
                                             <tr>
                                                 <th
                                                     scope='col'
-                                                    className='py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500'
+                                                    className='py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-white'
                                                 >
                                                     <div className='flex items-center gap-x-3'>
                                                         <span>Title</span>
@@ -87,14 +87,14 @@ const ManageMyItems = () => {
 
                                                 <th
                                                     scope='col'
-                                                    className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
+                                                    className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-white'
                                                 >
                                                     <span>Date</span>
                                                 </th>
 
                                                 <th
                                                     scope='col'
-                                                    className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
+                                                    className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-white'
                                                 >
                                                     <button className='flex items-center gap-x-2'>
                                                         <span>Category</span>
@@ -103,14 +103,14 @@ const ManageMyItems = () => {
 
                                                 <th
                                                     scope='col'
-                                                    className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
+                                                    className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-white'
                                                 >
                                                     Location
                                                 </th>
 
                                                 <th
                                                     scope='col'
-                                                    className='px-6 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
+                                                    className='px-6 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-white'
                                                 >
                                                     Post Type
                                                 </th>
@@ -119,24 +119,24 @@ const ManageMyItems = () => {
                                             </tr>
                                         </thead>
                                         {
-                                            itemData.map(item => <tbody key={item._id} className='bg-white divide-y divide-gray-200 '>
+                                            itemData.map(item => <tbody key={item._id} className='bg-white dark:bg-gray-800 divide-y divide-gray-200 hover:bg-gray-50 dark:hover:bg-gray-900'>
                                                 <tr>
-                                                    <td className='px-4 py-4 text-sm text-gray-500  whitespace-nowrap'>
+                                                    <td className='px-4 py-4 text-sm text-gray-500 dark:text-gray-200 whitespace-nowrap'>
                                                         {item.title}
                                                     </td>
 
-                                                    <td className='px-4 py-4 text-sm text-gray-500  whitespace-nowrap'>
+                                                    <td className='px-4 py-4 text-sm text-gray-500 dark:text-gray-200 whitespace-nowrap'>
                                                         {format(new Date(item.date), 'P')}
                                                     </td>
 
-                                                    <td className='px-4 py-4 text-sm text-gray-500  whitespace-nowrap'>
+                                                    <td className='px-4 py-4 text-sm text-gray-500 dark:text-gray-200 whitespace-nowrap'>
                                                         {item.category}
                                                     </td>
-                                                    <td className='px-4 py-4 text-sm text-gray-500  whitespace-nowrap'>
+                                                    <td className='px-4 py-4 text-sm text-gray-500 dark:text-gray-200 whitespace-nowrap'>
                                                         {item.location}
                                                     </td>
                                                     <td>
-                                                        <p className={`text-sm text-black text-center whitespace-nowrap ${item.postType === 'Lost' ? "bg-red-600/40 rounded-full" : "bg-green-600/40 rounded-full"}`}>
+                                                        <p className={`text-sm text-black dark:text-gray-200 text-center whitespace-nowrap ${item.postType === 'Lost' ? "bg-red-600/40 rounded-full" : "bg-green-600/40 rounded-full"}`}>
                                                             {item.postType}
                                                         </p>
                                                     </td>
