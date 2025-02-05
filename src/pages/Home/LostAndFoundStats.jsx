@@ -28,10 +28,10 @@ const LostAndFoundStats = () => {
     return (
         <div className="py-10 px-6 my-10">
             <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-4xl font-bold text-gray-800 mb-4">
+                <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
                     Lost & Found in Numbers
                 </h2>
-                <p className="text-gray-600 mb-12 text-lg">
+                <p className="text-gray-600 mb-12 dark:text-gray-200 text-lg">
                     Witness the incredible impact of our community as we connect people with their lost belongings every day.
                 </p>
 

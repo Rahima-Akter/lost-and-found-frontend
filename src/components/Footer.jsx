@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="px-4 divide-y bg-gray-800 text-white dark:bg-gray-100 dark:text-gray-800">
+        <footer className="px-4 divide-y bg-gray-800 text-white dark:bg-gray-800 dark:text-gray-200">
             <div className="w-10/12 mx-auto flex flex-col justify-between items-center gap-7 py-10 space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-[40%]">
                     <div className="flex md:items-center lg:justify-start mb-5">
@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-[60%] sm:grid-cols-4">
                     <div className="space-y-3">
-                        <h3 className="tracking-wide uppercase dark:text-gray-900">Explore</h3>
+                        <h3 className="tracking-wide uppercase dark:text-gray-100 font-bold">Explore</h3>
                         <ul className="space-y-1">
                             <li>
                                 <a rel="noopener noreferrer" href="#">Home</a>
@@ -38,7 +38,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="tracking-wide uppercase dark:text-gray-900">About</h3>
+                        <h3 className="tracking-wide uppercase dark:text-gray-100 font-bold">About</h3>
                         <ul className="space-y-1">
                             <li>
                                 <a rel="noopener noreferrer" href="#">About Us</a>
@@ -55,7 +55,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="uppercase dark:text-gray-900">Get in Touch</h3>
+                        <h3 className="uppercase dark:text-gray-100 font-bold">Get in Touch</h3>
                         <ul className="space-y-1">
                             <li>
                                 <a rel="noopener noreferrer" href="#"><span className='font-bold'>Email: </span>support@reunify.com</a>
@@ -71,7 +71,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='w-10/12 mx-auto flex justify-between items-center'>
-                <div className="py-6 text-sm dark:text-gray-600">© SRiTY. All rights reserved.</div>
+                <div className="py-6 text-sm dark:text-gray-400">© SRiTY. All rights reserved.</div>
                 <div className="flex justify-start space-x-3">
                     <a rel="noopener noreferrer" href="#" title="Facebook" className="flex items-center p-1">
                         <FaFacebook className='text-xl'/>

@@ -51,37 +51,37 @@ const Details = () => {
 
     return (
         <div className='flex lg:flex-row flex-col gap-6 lg:max-w-screen-lg w-10/12 mx-auto my-12'>
-            <div className='flex-1 px-4 py-7 bg-white rounded-md shadow-md lg:min-h-[350px] flex flex-col'>
+            <div className='flex-1 px-4 py-7 bg-white dark:bg-gray-800 rounded-md shadow-md lg:min-h-[350px] flex flex-col'>
                 <div className='flex items-center justify-between'>
-                    <span className='text-sm font-light text-gray-800 '>
+                    <span className='text-sm font-light text-gray-800 dark:text-white'>
                         <span className='font-bold'>Posted At:</span> {format(date, 'P')}
                     </span>
                     <span
-                        className={`rounded-full px-4 py-1 text-xs uppercase text-black ${postType === "Lost"
-                            ? "bg-red-500/20"
-                            : "bg-green-500/20"
+                        className={`rounded-full px-4 py-1 text-xs uppercase text-black dark:text-gray-300 ${postType === "Lost"
+                            ? "bg-red-500/20 dark:bg-red-500/40"
+                            : "bg-green-500/20 dark:bg-red-500/40"
                             }`}>
                         {status}
                     </span>
                 </div>
 
                 <div>
-                    <h1 className='mt-2 text-2xl font-semibold text-gray-800 '>
+                    <h1 className='mt-2 text-2xl font-semibold text-gray-800 dark:text-white'>
                         {title}
                     </h1>
 
-                    <p className='mt-2 text-sm text-gray-600 '>
+                    <p className='mt-2 text-sm text-gray-600 dark:text-gray-200'>
                         {description}
                     </p>
-                    <p className='mt-3 text-sm font-bold text-gray-600 '>
+                    <p className='mt-3 text-sm font-bold text-gray-600 dark:text-white'>
                         Uploader Details:
                     </p>
                     <div className='flex items-center gap-7'>
                         <div className='space-y-2'>
-                            <p className='text-sm  text-gray-600 '>
+                            <p className='text-sm  text-gray-600 dark:text-white'>
                                 Name: {contact.name}
                             </p>
-                            <p className='text-sm  text-gray-600 '>
+                            <p className='text-sm  text-gray-600 dark:text-white'>
                                 Email: {contact.email}
                             </p>
                         </div>
@@ -93,29 +93,29 @@ const Details = () => {
                         </div>
                     </div>
                     <div className='flex md:flex-row flex-col md:gap-5 mt-2 mb-5'>
-                        <p className='text-[15px] font-bold text-gray-600 '>
-                            Location: <span className='text-sm text-gray-600 font-normal'>{location}</span>
+                        <p className='text-[15px] font-bold text-gray-600 dark:text-white'>
+                            Location: <span className='text-sm text-gray-600 dark:text-gray-200 font-normal'>{location}</span>
                         </p>
-                        <p className='text-[15px] font-bold text-gray-600 '>
-                            Type: <span className='text-sm text-gray-600 font-normal'>{postType}</span>
+                        <p className='text-[15px] font-bold text-gray-600 dark:text-white'>
+                            Type: <span className='text-sm text-gray-600 fon dark:text-gray-200 fontt-normal'>{postType}</span>
                         </p>
-                        <p className='text-[15px] font-bold text-gray-600 '>
-                            Category: <span className='text-sm text-gray-600 font-normal'>{category}</span>
+                        <p className='text-[15px] font-bold text-gray-600 dark:text-white'>
+                            Category: <span className='text-sm text-gray-600 dark:text-gray-200 font-normal'>{category}</span>
                         </p>
                     </div>
                 </div>
                 <button
                     onClick={() => document.getElementById('detailsModal')?.showModal()}
-                    className='btn bg-gray-800 hover:bg-gray-700 text-white mt-auto w-28'>{postType === "Lost" ? "Found This" : "This is mine"}</button>
+                    className='btn btn-sm bg-gray-800 hover:bg-gray-700 text-white mt-auto w-28'>{postType === "Lost" ? "Found This" : "This is mine"}</button>
 
 
                 {/* modal */}
-                <dialog id="detailsModal" className="modal modal-middle">
-                    <div className="modal-box">
+                <dialog id="detailsModal" className="modal modal-middle backdrop-blur-md">
+                    <div className="modal-box dark:bg-gray-800">
                         <form onSubmit={handleSubmit} className='h-[50vh]'>
                             <div className='grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2'>
                                 <div>
-                                    <label className='text-gray-700 ' htmlFor='location'>
+                                    <label className='text-gray-700 dark:text-white' htmlFor='location'>
                                         Recovered Location
                                     </label>
                                     <input
@@ -128,7 +128,7 @@ const Details = () => {
                                 </div>
 
                                 <div>
-                                    <label className='text-gray-700 ' htmlFor='email'>
+                                    <label className='text-gray-700 dark:text-white' htmlFor='email'>
                                         Email Address
                                     </label>
                                     <input
@@ -142,7 +142,7 @@ const Details = () => {
                                 </div>
 
                                 <div>
-                                    <label className='text-gray-700 ' htmlFor='name'>
+                                    <label className='text-gray-700 dark:text-white' htmlFor='name'>
                                         Name
                                     </label>
                                     <input
@@ -155,7 +155,7 @@ const Details = () => {
                                     />
                                 </div>
                                 <div className='flex flex-col gap-2 '>
-                                    <label className='text-gray-700'>Date</label>
+                                    <label className='text-gray-700 dark:text-white'>Date</label>
 
                                     {/* Date Picker Input Field */}
                                     <DatePicker
@@ -168,7 +168,7 @@ const Details = () => {
                             <div className='flex justify-end mt-6'>
                                 <button
                                     type='submit'
-                                    className='px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600'
+                                    className='px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 dark:bg-none dark:borer dark:border-white rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600'
                                 >
                                     Submit
                                 </button>

@@ -70,7 +70,7 @@ const AddLostFoundItem = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg mt-8">
+        <div className="max-w-4xl mx-auto p-8 bg-white dark:bg-gray-900 shadow-lg rounded-lg my-8">
             <h1 className="text-2xl font-bold mb-6 text-gray-700">Add Lost or Found Item</h1>
             <form
                 onSubmit={handleSubmit}

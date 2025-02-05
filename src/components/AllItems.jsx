@@ -36,14 +36,14 @@ const AllItems = () => {
             </label>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
-                    items.map(item => <div key={item._id} className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
-                        <div className="flex items-center space-x-1">
+                    items.map(item => <div key={item._id} className="flex flex-col h-full max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-800 dark:text-gray-800">
+                        <div className="flex items-center space-x-1 -my-2">
                             {
-                                item.contact?.photo? <img alt="User profile photo" src={item.contact?.photo} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" /> : <img src={logo} alt="Default logo" className='w-14 rounded'/>
+                                item.contact?.photo? <img alt="User profile photo" src={item.contact?.photo} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" /> : <img src={logo} alt="Default logo" className='w-8 rounded'/>
                             }
                             <div className="flex flex-col space-y-1">
-                                <p className="text-sm font-semibold">{item.contact?.name}</p>
-                                <span className="text-xs dark:text-gray-600">
+                                <p className="text-xs font-semibold dark:text-gray-200">{item.contact?.name}</p>
+                                <span className="text-[10px] dark:text-gray-200">
                                     {/* {item.date} */}
                                     {format(new Date(item.date), 'P')}
                                     </span>
@@ -51,11 +51,11 @@ const AllItems = () => {
                         </div>
                         <div>
                             <img src={item.thumbnail} alt="" className="object-cover w-full mb-4 h-48 dark:bg-gray-500" />
-                            <h2 className="mb-1 text-xl font-semibold">{item.title}</h2>
-                            <p className="text-sm dark:text-gray-600">{item.description.substring(0, 120)}...</p>
+                            <h2 className="mb-1 text-xl font-semibold dark:text-white dark:font-bold">{item.title}</h2>
+                            <p className="text-sm dark:text-gray-200">{item.description.substring(0, 120)}...</p>
                         </div>
                         <div>
-                            <button onClick={() => navigate(`/details/${item._id}`)} className="btn bg-gray-800 hover:bg-gray-700 text-white">Details</button>
+                            <button onClick={() => navigate(`/details/${item._id}`)} className="btn btn-sm bg-gray-800 hover:bg-gray-700 text-white flex-grow -mt-8">Details</button>
                         </div>
 
                     </div>)
