@@ -71,7 +71,7 @@ const AddLostFoundItem = () => {
 
     return (
         <div className="max-w-4xl mx-auto p-8 bg-white dark:bg-gray-900 shadow-lg rounded-lg my-8">
-            <h1 className="text-2xl font-bold mb-6 text-gray-700">Add Lost or Found Item</h1>
+            <h1 className="text-2xl font-bold mb-6 text-gray-700 dark:text-white">Add Lost or Found Item</h1>
             <form
                 onSubmit={handleSubmit}
                 className="max-w-full w-full flex flex-col gap-5 p-4"
@@ -79,7 +79,7 @@ const AddLostFoundItem = () => {
                 <div className="flex md:flex-row flex-col gap-7 justify-between items-center">
                     {/* Post Type */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Post Type</label>
+                        <label className="block text-gray-600 dark:text-gray-300 font-medium mb-2">Post Type</label>
                         <select
                             value={postType}
                             onChange={(e) => setPostType(e.target.value)}
@@ -92,7 +92,7 @@ const AddLostFoundItem = () => {
 
                     {/* Thumbnail */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Thumbnail (Image)</label>
+                        <label className="block text-gray-600 dark:text-gray-300 font-medium mb-2">Thumbnail (Image)</label>
                         <input
                             type="text"
                             value={thumbnail}
@@ -107,7 +107,7 @@ const AddLostFoundItem = () => {
                 <div className="flex md:flex-row flex-col gap-7 justify-between items-center">
                     {/* Title */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Title</label>
+                        <label className="block text-gray-600 dark:text-gray-300 font-medium mb-2">Title</label>
                         <input
                             type="text"
                             value={title}
@@ -120,7 +120,7 @@ const AddLostFoundItem = () => {
 
                     {/* Category */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Category</label>
+                        <label className="block text-gray-600 dark:text-gray-300 font-medium mb-2">Category</label>
                         <input
                             type="text"
                             value={category}
@@ -135,7 +135,7 @@ const AddLostFoundItem = () => {
                 <div className="flex md:flex-row flex-col gap-7 justify-between items-center">
                     {/* Location */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Location</label>
+                        <label className="block text-gray-600 dark:text-gray-300 font-medium mb-2">Location</label>
                         <input
                             type="text"
                             value={location}
@@ -148,7 +148,7 @@ const AddLostFoundItem = () => {
 
                     {/* Date */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Date Lost or Found</label>
+                        <label className="block text-gray-600 dark:text-gray-300 font-medium mb-2">Date Lost or Found</label>
                         <DatePicker
                             selected={date}
                             onChange={(date) => setDate(date)}
@@ -161,7 +161,7 @@ const AddLostFoundItem = () => {
                 <div className="flex md:flex-row flex-col gap-7 justify-between items-center">
                     {/* Description */}
                     <div className="w-full">
-                        <label className="block text-gray-600 font-medium mb-2">Description</label>
+                        <label className="block text-gray-600 dark:text-gray-300 font-medium mb-2">Description</label>
                         <textarea
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
@@ -174,7 +174,7 @@ const AddLostFoundItem = () => {
 
                     {/* Contact Information */}
                     <div className="w-full space-y-3">
-                        <label className="block text-gray-600 font-medium mb-2">Contact Information</label>
+                        <label className="block text-gray-600 dark:text-gray-300 font-medium">Contact Information</label>
                         <input
                             type="text"
                             value={user.displayName}
