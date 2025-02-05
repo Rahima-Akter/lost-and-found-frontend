@@ -8,7 +8,9 @@ const Footer = () => {
             <div className="w-10/12 mx-auto flex flex-col justify-between items-center gap-7 py-10 space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-[40%]">
                     <div className="flex md:items-center lg:justify-start mb-5">
-                        <div className="dark:bg-violet-600">
+                        <div 
+                        // className="dark:bg-violet-600"
+                        >
                             {/* <img src="" alt="logo" /> */}
                             <Link to="/"><img src={logo} alt="" className='w-12 rounded'/></Link>
                         </div>
@@ -61,7 +63,7 @@ const Footer = () => {
                             <li>
                                 <a rel="noopener noreferrer" href="#"><span className='font-bold'>Phone: </span>+1 234 567 890</a>
                             </li>
-                            <li className='text-gray-200'>
+                            <li>
                                 <a rel="noopener noreferrer" href="#"><span className='font-bold'>Address: </span>1234 Innovation Drive, New York, NY</a>
                             </li>
                         </ul>

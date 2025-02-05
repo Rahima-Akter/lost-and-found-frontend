@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import { format } from 'date-fns';
 
 const AllItems = () => {
     const data = useLoaderData()
@@ -38,13 +39,13 @@ const AllItems = () => {
                     items.map(item => <div key={item._id} className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
                         <div className="flex items-center space-x-1">
                             {
-                                item.contact?.photo? <img alt="" src={item.contact?.photo} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" /> : <img src={logo} alt="" className='w-14 rounded'/>
+                                item.contact?.photo? <img alt="User profile photo" src={item.contact?.photo} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" /> : <img src={logo} alt="Default logo" className='w-14 rounded'/>
                             }
                             <div className="flex flex-col space-y-1">
                                 <p className="text-sm font-semibold">{item.contact?.name}</p>
                                 <span className="text-xs dark:text-gray-600">
-                                    {item.date}
-                                    {/* {format(new Date(item.date), 'M/d/yyyy')} */}
+                                    {/* {item.date} */}
+                                    {format(new Date(item.date), 'P')}
                                     </span>
                             </div>
                         </div>

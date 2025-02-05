@@ -21,7 +21,7 @@ const Details = () => {
         const location = form.location.value;
         const email = form.email.value;
         const name = form.name.value;
-        const date = startDate;
+        const date = startDate.toISOString();
         const photo = user?.photoURL;
         const postId = _id;
         const status = "recovered";

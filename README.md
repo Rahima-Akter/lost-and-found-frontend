@@ -43,3 +43,8 @@ The purpose of this project is to build a dynamic web application using modern t
 - **DaisyUI**: A Tailwind CSS plugin that provides a collection of pre-built UI components.
 - **Vite**: A build tool for faster and more efficient development and production builds.
 - **Prettier**: A code formatter used to maintain a consistent code style across the project.
+
+### INSTALLATION
+```bash
+npm install
+```
