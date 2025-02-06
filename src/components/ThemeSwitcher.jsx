@@ -21,8 +21,11 @@ const ThemeSwitcher = () => {
     };
 
     return (
-        <button onClick={toggleTheme}>
-            <input type="checkbox" className="toggle toggle-info" defaultChecked />
+        <button onClick={toggleTheme} className="p-2 text-2xl">
+            {/* <input type="checkbox" className="toggle toggle-info" defaultChecked /> */}
+            {
+                theme === "light" ? <BsMoonStars /> : <IoSunny />
+            }
         </button>
     );
 };
