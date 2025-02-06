@@ -42,11 +42,11 @@ The purpose of this project is to build a dynamic web application using modern t
 - **Vite**: A next-generation build tool that improves build speeds during development and production builds.
 - **Prettier**: A code formatting tool that automatically formats code to ensure consistent style across the project.
 
-## Installation Guide
+## Installation Guide ➡
 
 To set up this project on your local machine, follow the steps below:
 
-### Prerequisites
+### Prerequisites 📛
 
 Make sure you have the following installed:
 
@@ -69,3 +69,5 @@ npm install
 ```bash
 npm start
 ```
+
+you are set to run the project on your local machine
