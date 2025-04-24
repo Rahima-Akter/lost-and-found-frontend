@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="navbar dark:bg-gray-800/30 bg-gray-800 dark:backdrop-blur-lg text-white fixed top-0 left-0 right-0 md:px-10 px-4 z-10">
             <div className="flex-1">
-                <Link to="/" className='flex items-center justify-center md:gap-2 text-white font-bold lg:text-2xl text-xl'><img src={logo} alt="" className='w-14 rounded' /><span>Reunify</span></Link>
+                <Link to="/" className='flex items-center justify-center md:gap-2 text-white font-bold lg:text-2xl text-xl'><img src={logo} alt="site-logo" className='w-14 rounded' /><span>Reunify</span></Link>
             </div>
             <div className="flex-none gap-6">
                 <div className="space-x-4 hidden lg:flex">

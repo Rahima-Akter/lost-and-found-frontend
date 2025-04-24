@@ -12,7 +12,7 @@ const Footer = () => {
                         // className="dark:bg-violet-600"
                         >
                             {/* <img src="" alt="logo" /> */}
-                            <Link to="/"><img src={logo} alt="" className='w-12 rounded'/></Link>
+                            <Link to="/"><img src={logo} alt="site-logo" className='w-12 rounded'/></Link>
                         </div>
                         <span className="self-center text-2xl font-semibold -mt-2">Reunify</span>
                     </div>
