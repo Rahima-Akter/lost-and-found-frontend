@@ -29,7 +29,7 @@ const ReunitedStories = () => {
     };
 
     return (
-        <div className="bg-gray-100 dark:bg-black py-10 px-6 my-10">
+        <div className=" dark:bg-black py-10 px-6 my-10">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="md:text-3xl text-2xl font-bold text-gray-700 dark:text-white mb-4">Reunited and It Feels So Good!</h2>
                 <p className="text-gray-600 dark:text-white mb-8">
@@ -39,16 +39,16 @@ const ReunitedStories = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {stories && stories.length > 0 ? (
                         stories.slice(0, visibleCount).map((story) => (
-                            <div key={story.id} className="bg-white dark:bg-gray-800 flex flex-col h-full shadow-lg hover:scale-105 rounded-lg p-5">
+                            <div key={story.id} className="bg-white dark:bg-gray-800 flex flex-col h-full shadow-lg rounded-lg p-5 group">
                                 <img
                                     src={story.thumbnail}
                                     alt={story.title}
-                                    className="w-full h-40 object-cover rounded-md mb-4"
+                                    className="w-full h-40 object-cover rounded-md mb-4 group-hover:scale-[1.03] overflow-hidden duration-1000"
                                 />
                                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{story.title}</h3>
                                 <p className="text-gray-600 dark:text-gray-200 text-sm mb-4">{story.description.slice(0, 100)}...</p>
                                 <button
-                                    className="text-blue-500 font-medium hover:underline flex-grow mt-auto"
+                                    className="font-medium hover:underline flex-grow mt-auto"
                                     onClick={() => openModal(story)}
                                 >
                                     Read More
