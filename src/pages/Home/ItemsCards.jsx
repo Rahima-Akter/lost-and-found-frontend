@@ -16,7 +16,7 @@ const ItemsCards = () => {
     return (
         <div className="my-12 dark:bg-black">
             <p className="text-center font-bold text-2xl md:text-3xl drop-shadow-xl mt-16 dark:text-white">
-                Latest Find & Lost Items
+                Latest Found & Lost Items
             </p>
             <Link to="/allItem" className="btn btn-sm md:btn-md my-5 bg-gray-800 hover:bg-gray-700 text-white">
                 View All...
@@ -28,7 +28,7 @@ const ItemsCards = () => {
                     className="flex flex-col max-w-sm px-6 py-3 overflow-hidden rounded-lg shadow-lg dark:text-gray-800 hover:scale-105 duration-700 min-h-full dark:bg-gray-800"
                 >
                     <div className="flex space-x-4 mb-4">
-                        <img alt=""
+                        <img alt="user-profile-image"
                             src={item.contact.photo || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMELiYWrb60oG6HxN_tdDOjqoEwhATOtC3uQ&s"}
                             className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500"
                         />
@@ -44,7 +44,7 @@ const ItemsCards = () => {
                     <div>
                         <img
                             src={item.thumbnail}
-                            alt=""
+                            alt="item-image"
                             className="object-cover w-full mb-4 h-48"
                         />
                         <h2 className="mb-1 text-xl font-semibold">{item.title}</h2>

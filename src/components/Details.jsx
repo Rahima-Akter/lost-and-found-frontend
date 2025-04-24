@@ -88,7 +88,7 @@ const Details = () => {
                         <div className='rounded-full object-cover overflow-hidden w-14 h-14'>
                             <img
                                 src={contact.photo || "N/A"}
-                                alt='image'
+                                alt='user-image'
                             />
                         </div>
                     </div>
@@ -180,7 +180,7 @@ const Details = () => {
             </div>
             {/* image div */}
             <div className='lg:w-[45%] w-full overflow-hidden'>
-                <img src={thumbnail} alt="" className='object-cover w-full h-full' />
+                <img src={thumbnail} alt="item-image" className='object-cover w-full h-full' />
             </div>
         </div>
     );

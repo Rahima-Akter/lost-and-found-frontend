@@ -1,91 +1,143 @@
-import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import { FaFacebook, FaInstagram, FaTwitter, FaHeart } from "react-icons/fa";
 
 const Footer = () => {
-    return (
-        <footer className="px-4 divide-y bg-gray-800 text-white dark:bg-gray-800 dark:text-gray-200">
-            <div className="w-10/12 mx-auto flex flex-col justify-between items-center gap-7 py-10 space-y-8 lg:flex-row lg:space-y-0">
-                <div className="lg:w-[40%]">
-                    <div className="flex md:items-center lg:justify-start mb-5">
-                        <div 
-                        // className="dark:bg-violet-600"
-                        >
-                            {/* <img src="" alt="logo" /> */}
-                            <Link to="/"><img src={logo} alt="" className='w-12 rounded'/></Link>
-                        </div>
-                        <span className="self-center text-2xl font-semibold -mt-2">Reunify</span>
-                    </div>
-                    <p className='lg:pr-10 lg:px-0 md:px-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nobis. Nobis non, nostrum reiciendis sed quisquam omnis fuga dolor eum!</p>
+  return (
+    <footer className="bg-gray-800 text-white dark:bg-gray-800 dark:text-gray-200 border-t border-gray-700">
+      <div className="container mx-auto px-6 pt-12 pb-4">
+        <div className="grid grid-cols-1 gap-20 lg:grid-cols-3">
+          <div className="space-y-6">
+            <div className="flex items-center space-x-3">
+              <Link to="/" className="flex items-center">
+                <img
+                  src={logo}
+                  alt="site-logo"
+                  className="w-12 h-12 rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+                />
+                <span className="ml-3 text-2xl font-bold text-white">
+                  Reunify
+                </span>
+              </Link>
+            </div>
+            <p className="text-gray-300 leading-relaxed">
+              Connecting families, reuniting loved ones. Our mission is to bring
+              people together through innovative technology and compassionate
+              service.
+            </p>
+          </div>
 
-                </div>
-                <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-[60%] sm:grid-cols-4">
-                    <div className="space-y-3">
-                        <h3 className="tracking-wide uppercase dark:text-gray-100 font-bold">Explore</h3>
-                        <ul className="space-y-1">
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Home</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Campaign's</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#">How It Works</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Success Stories</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="space-y-3">
-                        <h3 className="tracking-wide uppercase dark:text-gray-100 font-bold">About</h3>
-                        <ul className="space-y-1">
-                            <li>
-                                <a rel="noopener noreferrer" href="#">About Us</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Our Team</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Terms of Service</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="space-y-3">
-                        <h3 className="uppercase dark:text-gray-100 font-bold">Get in Touch</h3>
-                        <ul className="space-y-1">
-                            <li>
-                                <a rel="noopener noreferrer" href="#"><span className='font-bold'>Email: </span>support@reunify.com</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#"><span className='font-bold'>Phone: </span>+1 234 567 890</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#"><span className='font-bold'>Address: </span>1234 Innovation Drive, New York, NY</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+          {/* Links Section*/}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-2">
+            <div className="space-y-4">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300 border-b border-gray-700 pb-2">
+                Explore
+              </h3>
+              <ul className="space-y-2">
+                {["Home", "Campaigns", "How It Works", "Success Stories"].map(
+                  (item) => (
+                    <li key={item}>
+                      <a
+                        href="#"
+                        className="text-gray-400 hover:text-white transition-colors duration-200"
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  )
+                )}
+              </ul>
             </div>
-            <div className='w-10/12 mx-auto flex justify-between items-center'>
-                <div className="py-6 text-sm dark:text-gray-400">© SRiTY. All rights reserved.</div>
-                <div className="flex justify-start space-x-3">
-                    <a rel="noopener noreferrer" href="#" title="Facebook" className="flex items-center p-1">
-                        <FaFacebook className='text-xl'/>
+
+            <div className="space-y-4">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300 border-b border-gray-700 pb-2">
+                About
+              </h3>
+              <ul className="space-y-2">
+                {[
+                  "About Us",
+                  "Our Team",
+                  "Privacy Policy",
+                  "Terms of Service",
+                ].map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-gray-400 hover:text-white transition-colors duration-200"
+                    >
+                      {item}
                     </a>
-                    <a rel="noopener noreferrer" href="#" title="Twitter" className="flex items-center p-1">
-                        <FaTwitter className='text-xl'/>
-                    </a>
-                    <a rel="noopener noreferrer" href="#" title="Instagram" className="flex items-center p-1">
-                        <FaInstagram className='text-xl'/>
-                    </a>
-                </div>
+                  </li>
+                ))}
+              </ul>
             </div>
-        </footer>
-    );
+          </div>
+
+          {/* Contact Section */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300 border-b border-gray-700 pb-2">
+              Contact Us
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <span className="text-gray-400 mr-2">✉️</span>
+                <a
+                  href="mailto:support@reunify.com"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  support@reunify.com
+                </a>
+              </li>
+              <li className="flex items-start">
+                <span className="text-gray-400 mr-2">📞</span>
+                <a
+                  href="tel:+1234567890"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  +1 234 567 890
+                </a>
+              </li>
+              <li className="flex items-start">
+                <span className="text-gray-400 mr-2">📍</span>
+                <span className="text-gray-400">
+                  1234 Innovation Drive, New York, NY
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-6 pt-4 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center space-x-1 text-gray-400">
+            <span>© {new Date().getFullYear()} Reunify</span>
+            <span className="mx-1">•</span>
+            <span>All rights reserved</span>
+          </div>
+          <div className="flex space-x-4 md:pt-0 pt-4">
+            <a
+              href="#"
+              className="p-2 rounded-full bg-gray-700 hover:bg-blue-600 transition-colors duration-300"
+            >
+              <FaFacebook className="text-lg" />
+            </a>
+            <a
+              href="#"
+              className="p-2 rounded-full bg-gray-700 hover:bg-pink-600 transition-colors duration-300"
+            >
+              <FaInstagram className="text-lg" />
+            </a>
+            <a
+              href="#"
+              className="p-2 rounded-full bg-gray-700 hover:bg-sky-500 transition-colors duration-300"
+            >
+              <FaTwitter className="text-lg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

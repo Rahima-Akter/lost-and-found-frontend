@@ -50,7 +50,7 @@ const AllItems = () => {
                             </div>
                         </div>
                         <div>
-                            <img src={item.thumbnail} alt="" className="object-cover w-full mb-4 h-48 dark:bg-gray-500" />
+                            <img src={item.thumbnail} alt="item-image" className="object-cover w-full mb-4 h-48 dark:bg-gray-500" />
                             <h2 className="mb-1 text-xl font-semibold dark:text-white dark:font-bold">{item.title}</h2>
                             <p className="text-sm dark:text-gray-200">{item.description.substring(0, 120)}...</p>
                         </div>
