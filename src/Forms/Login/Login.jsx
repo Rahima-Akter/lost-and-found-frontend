@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 // import bgImg from '../../assets/images/login.jpg'
-// import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png'
 import { useContext, useState } from 'react'
 import { authContext } from '../../Context/Context'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
@@ -70,7 +70,7 @@ const Login = () => {
 
                 <div className='w-full px-6 py-8 md:px-8 lg:w-1/2'>
                     <div className='flex justify-center mx-auto'>
-                        <img className='w-auto h-7 sm:h-8' src={'logo'} alt='site-logo' />
+                        <img className='w-auto h-7 sm:h-8' src={logo} alt='site-logo' />
                     </div>
 
                     <p className='mt-3 text-xl text-center text-gray-600 '>
