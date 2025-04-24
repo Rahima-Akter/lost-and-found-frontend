@@ -3,6 +3,7 @@ import Banner from './Banner';
 import ItemsCards from './ItemsCards';
 import ReunitedStories from './ReunitedStories';
 import LostAndFoundStats from './LostAndFoundStats';
+import TipsSection from './TipsSection';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
                 <ItemsCards/>
                 <ReunitedStories/>
                 <LostAndFoundStats/>
+                <TipsSection/>
             </div>
         </div>
     );
